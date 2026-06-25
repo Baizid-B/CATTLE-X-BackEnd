@@ -589,24 +589,7 @@ async function startServer() {
     }
 }
 
-// ফাংশন রান করা
-startServer();
-
 app.get('/', (req, res) => {
     res.send('BCI Backend Server is Running with Secure Google Auth Support');
 });
 
-app.listen(port, () => {
-    console.log(`🚀 Server is running on port ${port}`);
-});
-
-startServer().catch(err => {
-  console.error("❌ Failed to start server:", err);
-});
-
-// ─────────────────────────────────────────────
-//  EXPRESS SERVER START
-// ─────────────────────────────────────────────
-app.listen(port, () => {
-  console.log(`🚀 Server running on port ${port}`);
-});
